@@ -86,7 +86,7 @@ export async function downloadMeasurementPng(
   const objectUrl = URL.createObjectURL(blob);
   const anchor = document.createElement("a");
   anchor.href = objectUrl;
-  anchor.download = `pd-reading-${new Date().toISOString().replaceAll(":", "-")}.png`;
+  anchor.download = `pd-reading-${new Date().toISOString().replace(/:/g, "-")}.png`;
   anchor.click();
   URL.revokeObjectURL(objectUrl);
 }

@@ -100,6 +100,16 @@ npm run dev
 
 Then open the local Vite URL (usually `http://localhost:5173`).
 
+## GitHub Pages deploy
+
+This repo now includes [deploy-pages.yml](/Users/isaclarsen/dev/imviLabs/PDImvi/.github/workflows/deploy-pages.yml), which builds `dist/` and deploys it to GitHub Pages.
+
+1. Push to `main`.
+2. In GitHub: Settings -> Pages -> Source, set **GitHub Actions**.
+3. Wait for the "Deploy GitHub Pages" workflow to finish.
+
+Important: do not deploy raw source files (`index.html` + `src/main.tsx`) directly. Pages must serve the built `dist` output.
+
 ## MVP features checklist
 
 - One-page, step-based UX

@@ -3,5 +3,6 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: '/ImviPD/'
+  // Relative asset paths make GitHub Pages subpath hosting robust.
+  base: "./"
 });
